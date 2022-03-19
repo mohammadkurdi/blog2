@@ -1,12 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Traits\BaseTrait;
+use Illuminate\Support\Facades\Validator;
+
 
 class PostController extends Controller
 {
+    use BaseTrait;
+
     /**
      * Display a listing of the resource.
      *

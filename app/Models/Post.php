@@ -11,13 +11,13 @@ class Post extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'title',
+        'description',
+        'user_id',
     ];
 
     public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(User::class );
+        return $this->belongsTo(User::class);
     }
 }
